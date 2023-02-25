@@ -7,41 +7,53 @@
     <title>Currency Pipes</title>
   </head>
   <body>
-  <div class="title-card">
-  <h1>ANGULAR PIPES DEMONSTRATION</h1>
-  <h2>Currency Pipes</h2>
-  </div>
-  <hr class="line" />
+    <div class="title-card">
+      <h1>ANGULAR PIPES DEMONSTRATION</h1>
+      <h2>Currency Pipes</h2>
+    </div>
+    <hr class="line" />
     <div class="banner-table">
       <h3>PRICE VALUE: 2500</h3>
-      <p>{{ price | currency: '': true}}</p>
+      <p>{{ price | currency: '':true }}</p>
     </div>
-      <table id="currency">
-        <tr>
-          <th>COUNTRY</th>
-          <th>CURRENCY SYMBOLS</th>
-        </tr> 
-        <tr>
-          <td>INDIAN RUPEE</td>
-          <td>{{ price | currency: 'INR'}}</td>
-        </tr>
-        <tr>
-          <td>JAPANESE YEN</td>
-          <td>{{ price | currency: 'JPY'}}</td>
-        </tr>
-        <tr>
-          <td>KOREAN WON</td>
-          <td>{{ price | currency: 'KRW'}}</td>
-        </tr>
-        <tr>
-          <td>PHILIPPINE PESO</td>
-          <td>{{ price | currency: 'PHP'}}</td>
-        </tr>
-        <tr>
-          <td>US DOLLAR</td>
-          <td>{{ price | currency: 'USD'}}</td>
-        </tr>
-      </table>
-      <br/>
+    <table id="currency">
+      <tr>
+        <th>COUNTRY</th>
+        <th>CURRENCY NAME</th>
+        <th>CURRENCY</th>
+        <th>CURRENCY CODE</th>
+      </tr>
+      <tr>
+        <td>INDIA</td>
+        <td>{{ price | currency: 'INR':'Indian Rupee ' }}</td>
+        <td>{{ price | currency: 'INR' }}</td>
+        <td>{{ price | currency: 'INR':'code' }}</td>
+      </tr>
+      <tr>
+        <td>JAPAN</td>
+        <td>{{ price | currency: 'JPY':'Japanese Yen ' }}</td>
+        <td>{{ price | currency: 'JPY' }}</td>
+        <td>{{ price | currency: 'JPY':'code' }}</td>
+      </tr>
+      <tr>
+        <td>PHILIPPINES</td>
+        <td>{{ price | currency: 'PHP':'Philippine Peso ' }}</td>
+        <td>{{ price | currency: 'PHP' }}</td>
+        <td>{{ price | currency: 'PHP':'code' }}</td>
+      </tr>
+      <tr>
+        <td>SOUTH KOREA</td>
+        <td>{{ price | currency: 'KRW':'Korean Won ' }}</td>
+        <td>{{ price | currency: 'KRW' }}</td>
+        <td>{{ price | currency: 'KRW':'code' }}</td>
+      </tr>
+      <tr>
+        <td>UNITED STATES OF AMERICA/td>
+        <td>{{ price | currency: 'USD':'US DOLLAR' }}</td>
+        <td>{{ price | currency: 'USD' }}</td>
+        <td>{{ price | currency: 'USD':'code' }}</td>
+      </tr>
+    </table>
+    <br />
   </body>
 </html>
