@@ -7,6 +7,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'pipes reactive';
-  price : number = 2000;
+  price : number = 2500;
   
 }
